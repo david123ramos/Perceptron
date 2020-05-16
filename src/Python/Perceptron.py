@@ -22,7 +22,6 @@ class Perceptron:
 
     def clasify(self, value):
         s = value.dot(self.weight)
-        print("------> ", self.weight, value, s)
         return self.acf( s )
 
     def train(self):
@@ -37,8 +36,6 @@ class Perceptron:
                 error =  abs( self.supervisor[i] - resp )
                 
                 totalError = totalError + error
-
-                print( totalError, "######" )
                 
                 for j in range( len( self.weight ) ):
                     
